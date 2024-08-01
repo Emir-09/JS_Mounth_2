@@ -23,10 +23,10 @@ function moveBlock() {
     else if (y === limit && x > 0) x -= speed;
     else if (x === 0 && y > 0) y -= speed;
 
-  block.style.left = `${x}px`;
-  block.style.top = `${y}px`;
+    block.style.left = `${x}px`;
+    block.style.top = `${y}px`;
 
-  setTimeout(moveBlock, 10);
+    setTimeout(moveBlock, 10);
 }
 
 moveBlock();
