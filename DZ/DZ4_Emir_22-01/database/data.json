@@ -1,0 +1,54 @@
+{
+  "goods": [
+    {
+      "productName": "Apple / iPhone 13 128GB (Гонконг)",
+      "img": "https://basket-10.wb.ru/vol1410/part141004/141004640/images/big/1.jpg",
+      "price": 58392
+    },
+    {
+      "productName": "OLD SPICE / Мужской дезодорант стик Wolfthorn 50мл",
+      "img": "https://basket-01.wb.ru/vol21/part2186/2186642/images/big/1.jpg",
+      "price": 392
+    },
+    {
+      "productName": "Xiaomi / Беспроводные наушники вакуумные",
+      "img": "https://basket-09.wb.ru/vol1293/part129364/129364661/images/big/1.jpg",
+      "price": 12043
+    },
+    {
+      "productName": "Выручалочка Кухонный волнистый нож для фигурной нарезки овощей и фруктов",
+      "img": "https://basket-01.wb.ru/vol92/part9267/9267718/images/big/1.jpg",
+      "price": 476
+    },
+    {
+      "productName": "Резинки для фитнеса PWR! Фитнес-резинки эспандер набор 5 шт",
+      "img": "https://basket-02.wb.ru/vol191/part19197/19197061/images/big/1.jpg",
+      "price": 325
+    },
+    {
+      "productName": "Xiaomi / Беспроводные наушники K55 игровые с шумоподавлением",
+      "img": "https://basket-04.wb.ru/vol708/part70874/70874268/images/big/1.jpg",
+      "price": 1526
+    },
+    {
+      "productName": "Redragon / Игровые наушники проводные с микрофоном Lamia2",
+      "img": "https://basket-08.wb.ru/vol1165/part116582/116582514/images/big/4.jpg",
+      "price": 3755
+    },
+    {
+      "productName": "Razer / Игровая мышь Viper Ultimate Wireless RZ01-03050100-R3G1",
+      "img": "https://basket-02.wb.ru/vol264/part26481/26481985/images/big/1.jpg",
+      "price": 10265
+    },
+    {
+      "productName": "Dyson / Пылесос V10 Absolute (SV27)",
+      "img": "https://basket-10.wb.ru/vol1419/part141938/141938544/images/big/1.jpg",
+      "price": 32570
+    },
+    {
+      "productName": "Еврономер / Холодильник бытовая техника мини бар винный шкаф",
+      "img": "https://basket-03.wb.ru/vol349/part34911/34911158/images/big/1.jpg",
+      "price": 17397
+    }
+  ]
+}

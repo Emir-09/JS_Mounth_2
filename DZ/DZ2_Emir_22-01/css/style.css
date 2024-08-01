@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.wrapper {
+    padding: 50px 250px 0;
+}
+
+.inner_wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    perspective: 500px;
+}
+
+#block {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+}
+
+.side {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: 2px solid white;
+    font: normal 20px Arial;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
+
+.front {
+    transform: translateZ(50px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+#timer {
+    width: 60px;
+    height: 30px;
+    border: white solid 1px;
+    margin: 200px auto 0;
+    font-family: sans-serif;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}

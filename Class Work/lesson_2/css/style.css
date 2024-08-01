@@ -1,0 +1,13 @@
+.block {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+}
+
+.box {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
