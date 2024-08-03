@@ -1,59 +1,51 @@
 // function varTest() {
 //     var x = 1
-//     console.log(x, 'a')
+//     console.log(x, 'a');
 //     function abc() {
 //         var x = 2
-//         console.log(x, 'b')
+//         console.log(x, 'b');
 //     }
 //     abc()
-//     console.log(x, 'c')
+//     console.log(x, 'c');
 // }
-//
+
 // varTest()
 
-// if(NaN){
-//     console.log(true)
-// }else{
-//     console.log(false)
-// }
-//
-// console.log(Boolean([].length))
 
 // const letTest = () => {
 //     let x = 1
-//     console.log(x, 'a')
-//     if(true){
+//     console.log(x, 'a');
+//     if (true) {
 //         let x = 2
-//         console.log(x, 'b')
+//         console.log(x, 'b');
 //     }
-//     console.log(x, 'c')
+//     console.log(x, 'c');
 // }
-//
+
 // letTest()
 
+const btns = document.querySelectorAll('button')
 
 
 // btns.forEach((item) => {
 //     item.addEventListener('click', () => {
-//         // if(item.classList.contains('red')) {
+//         // if (item.classList.contains('red')) {
 //         //     item.classList.remove('red')
-//         // }else{
+//         // } else {
 //         //     item.classList.add('red')
 //         // }
 //         item.classList.toggle('red')
 //     })
 // })
 
-
-
-const newBtn = document.createElement('button')
 const wrapper = document.querySelector('.wrapper')
-newBtn.innerHTML = "7"
+const newButton = document.createElement('button')
+newButton.innerHTML = '7'
 
-wrapper.append(newBtn)
+wrapper.append(newButton)
 
-wrapper.addEventListener('click', (event) => {
-    if(event.target.tagName === 'BUTTON'){
-        event.target.classList.toggle('red')
+wrapper.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+        e.target.classList.toggle('red')
     }
 })

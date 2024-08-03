@@ -4,10 +4,10 @@ const tabsParent = document.querySelector('.tabheader__items')
 
 
 const hideTabContent = () => {
-    tabContent.forEach((item) =>{
+    tabContent.forEach(item =>{
         item.style.display = 'none'
     })
-    tabs.forEach((item) => {
+    tabs.forEach(item => {
         item.classList.remove('tabheader__item_active')
     })
 }
@@ -17,11 +17,7 @@ const showTabContent = (i = 0) => {
     tabs[i].classList.add('tabheader__item_active')
 }
 
-hideTabContent()
-showTabContent()
-
-
-tabsParent.addEventListener('click', (e) => {
+tabsParent.addEventListener('click', e => {
     const target = e.target
     if(target.classList.contains('tabheader__item')){
         tabs.forEach((item, index) => {
@@ -39,17 +35,18 @@ const closeModalBtn = document.querySelector('.modal__close')
 
 
 const openModal = () => {
-    modal.classList.add('show')
     modal.classList.remove('hide')
+    modal.classList.add('show')
     document.body.style.overflow = 'hidden'
-    modal.addEventListener('click', (e) => {
+    modal.addEventListener('click', e => {
         if (e.target === modal) {
-            modal.classList.add('hide')
             modal.classList.remove('show')
+            modal.classList.add('hide')
             document.body.style.overflow = ''
         }
     })
 }
+
 openModalBtn.addEventListener('click', openModal)
 
 const closeModal = () => {
@@ -57,6 +54,7 @@ const closeModal = () => {
     modal.classList.remove('show')
     document.body.style.overflow = ''
 }
+
 closeModalBtn.addEventListener('click', closeModal)
 
 let autoSwitchInterval = null
@@ -70,7 +68,6 @@ const startAutoSwitch = () => {
         }
         hideTabContent()
         showTabContent(tabNumber)
-        switchTabs(tabNumber)
     }, 2000)
 }
 
@@ -79,29 +76,28 @@ const stopAutoSwitch = () => {
 }
 
 tabs.forEach((item, index) => {
-    item.addEventListener('click', (e) => {
+    item.addEventListener('click', e => {
         const target = e.target
         stopAutoSwitch()
-        setTimeout(startAutoSwitch, 5000)
+        setTimeout(startAutoSwitch, 6000)
         if (target === item) {
             tabNumber = index
         }
     })
 })
 
-startAutoSwitch()
-
-const switchTabs = (currentIndex) => {
-    tabContent.forEach(item => item.classList.remove('active'));
-    tabContent[currentIndex].classList.add('active');
-}
-
 
 window.addEventListener('scroll', () => {
     if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-        modal.classList.add('show')
-        modal.classList.remove('hide')
-        document.body.style.overflow = 'hidden'
+        openModal()
+        console.log(window.scrollY, window.innerHeight, document.documentElement.scrollHeight);
     }
 })
+
+
+hideTabContent()
+showTabContent()
+startAutoSwitch()
+console.log(window.scrollY, window.innerHeight, document.documentElement.scrollHeight);
+
 
