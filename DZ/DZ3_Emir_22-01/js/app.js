@@ -90,7 +90,6 @@ tabs.forEach((item, index) => {
 window.addEventListener('scroll', () => {
     if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
         openModal()
-        console.log(window.scrollY, window.innerHeight, document.documentElement.scrollHeight);
     }
 })
 
@@ -98,6 +97,3 @@ window.addEventListener('scroll', () => {
 hideTabContent()
 showTabContent()
 startAutoSwitch()
-console.log(window.scrollY, window.innerHeight, document.documentElement.scrollHeight);
-
-
