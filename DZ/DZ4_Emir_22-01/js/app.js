@@ -88,7 +88,6 @@ const requestForObjects = () => {
             const span = document.createElement('p')
 
             img.style.backgroundImage = `url("${elem.img}")`
-            console.log(elem.productName)
             span.innerHTML = elem.price
             p.innerHTML = elem.productName
 
@@ -103,4 +102,4 @@ const requestForObjects = () => {
     })
 }
 
-requestForObjects()
+requestForObjects() 
