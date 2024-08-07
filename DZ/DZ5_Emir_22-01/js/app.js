@@ -19,12 +19,12 @@ const euro = document.querySelector('#euro')
 paragraphs.forEach((item) => {
     item.addEventListener("input", () => {
         const request = new XMLHttpRequest()
-        request.open("GET", 'data.json')
+        request.open("GET", 'data/data.json')
         request.setRequestHeader('Content_Type', "application/json")
         request.send()
         request.addEventListener('load', () => {
             const data = JSON.parse(request.response)
-
+            
             switch (item.classList[0]) {
                 case som.id:
                     usd.value = (som.value / data.usd.som).toFixed(2)
