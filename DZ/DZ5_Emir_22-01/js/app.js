@@ -3,27 +3,21 @@ const paragraphs = Array.from(wrapper.querySelectorAll('div'))
 const som = document.querySelector('#som')
 const usd = document.querySelector('#usd')
 const euro = document.querySelector('#euro')
+const url = 'data/data.json'
 
-// som.addEventListener('input', (e) => {
-//     console.log(e.target.value)
-//     const request = new XMLHttpRequest()
-//     request.open("GET", 'data.json')
-//     request.setRequestHeader('Content_Type', "application/json")
-//     request.send()
-//     request.addEventListener('load', () => {
-//         const data = JSON.parse(request.response)
-//         console.log(data)
-//         usd.value = (e.target.value / data.usd).toFixed(2)
-//     })
-// })
+
 paragraphs.forEach((item) => {
-    item.addEventListener("input", () => {
-        const request = new XMLHttpRequest()
-        request.open("GET", 'data/data.json')
-        request.setRequestHeader('Content_Type', "application/json")
-        request.send()
-        request.addEventListener('load', () => {
-            const data = JSON.parse(request.response)
+    item.addEventListener("input", async () => {
+        try {
+            const request = await fetch(url, {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json' }
+            })
+            if (!request.ok) {
+                throw new Error('Network response was not ok')
+            }
+
+            const data = await request.json()
             
             switch (item.classList[0]) {
                 case som.id:
@@ -51,17 +45,8 @@ paragraphs.forEach((item) => {
                     }
                     break
             }
-            // isTrue
-            //     ? target.value = (elem.value / data.usd).toFixed(2)
-            //     : target.value = (elem.value * data.usd).toFixed(2)
-            // if(isTrue){
-            //     target.value = (elem.value / data.usd).toFixed(2)
-            // } else {
-            //     target.value = (elem.value * data.usd).toFixed(2)
-            // }
-            // elem.value === "" || (target.value = "")
-            // elem.value === "" ? (target.value = "") : null
-            // elem.value === "" && (target.value = "")
-        })
+        } catch(error) {
+            console.error('There was a problem with the fetch operation: ', error)
+        }
     })
 })
